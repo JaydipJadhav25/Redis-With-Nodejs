@@ -8,7 +8,9 @@ async function init(){
 
     await client.lpush("newdata:msg" , ["msg1" , "msg2" , "msg3"]);
 
+    // console.log(await client.lrange("newdata:msg" , " 0" , "-1"));
  
+
             //Blocking commands
 
     console.log(await client.blpop("data:msg" , 10));
